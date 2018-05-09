@@ -1,0 +1,88 @@
+/*
+colors: 
+dark blue hex: #006697;
+light blue hex: #66a3c1;
+joker hex: #8e3d5d;
+
+max-width: 1280px
+
+4 columns:
+    305 width
+    20 margin (gutter)
+
+base: 5px;
+*/
+
+:root {
+    --dark-blue: #006697;
+    --light-blue: #66a3c1;
+}
+
+/* use variable by writing color: var (--dark-blue); */
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    min-width: 320px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+/**** Mobile first***/
+
+.line {
+    width: 35px;
+    height: 5px;
+    border-radius: 5px;
+    background-color: #555555;
+    margin-bottom: 5px;
+}
+
+nav {
+    height: 0;
+    opacity: 0;
+}
+
+.menu {
+    overflow: hidden;
+}
+
+.hamburger, .logo, .login, .basket {
+    float: left;
+}
+
+.logo {
+    text-align: center;
+}
+
+.basket img {
+    width: 5em;
+}
+
+/*
+.logo{
+    margin: auto;
+    display: inline;
+    float: left;
+}
+*/
+
+/*-- Desktop version --*/
+@media (max-width: 1280px) {
+    nav {
+        
+    }
+}
+
