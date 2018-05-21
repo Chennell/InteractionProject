@@ -18,7 +18,7 @@ base: 5px;
     --light-blue: #66a3c1;
 }
 
-/* use variable by writing color: var (--dark-blue); */
+/* use variable by writing background-color: var(--dark-blue); */
 
 * {
     margin: 0px;
@@ -28,7 +28,7 @@ base: 5px;
 body {
     min-width: 320px;
     margin: 0 auto;
-    margin-top: 20px;
+    margin: 20px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -39,45 +39,241 @@ p {
     font-family: 'Open Sans', sans-serif;
 }
 
+a{
+    text-decoration: none;
+    color: var(--light-blue);
+}
+
+.button{
+    background-color: var(--dark-blue);
+    font-size: 12px;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    text-transform: uppercase;
+    margin: 5px;
+    width: fit-content;
+}
+
 
 /**** Mobile first***/
 
+/**** MENU*************/
+/*** This is the cross/hamburger styling**/
 .line {
     width: 35px;
-    height: 5px;
-    border-radius: 5px;
+    height: 4px;
+    border-radius: 10px;
     background-color: #555555;
     margin-bottom: 5px;
 }
 
-nav {
-    height: 0;
-    opacity: 0;
+.one{
+    transition: 0.2s ease-in-out;
+    -webkit-transition: 0.2s ease-in-out;
+    -moz-transition: 0.2s ease-in-out;
 }
 
+.two{
+    transition: 0.2s ease-in-out;
+    -webkit-transition: 0.2s ease-in-out;
+    -moz-transition: 0.2s ease-in-out;
+}
+
+.three{
+    transition: 0.2s ease-in-out;
+    -webkit-transition: 0.2s ease-in-out;
+    -moz-transition: 0.2s ease-in-out;
+}
+/*This is how the lines should move, Should happen when you click**/
+.one.open{
+    transform: translateY(9px) rotateZ(45deg);
+    transition: 0.2s ease-in-out;
+    -webkit-transition: 0.2s ease-in-out;
+    -moz-transition: 0.2s ease-in-out;
+}
+
+.two.open{
+    width: 0;
+    opacity: 0;
+    transition: 0.2s ease-in-out;
+    -webkit-transition: 0.2s ease-in-out;
+    -moz-transition: 0.2s ease-in-out;
+}
+
+.three.open{
+    transform: translateY(-9px) rotateZ(-45deg);
+    transition: 0.2s ease-in-out;
+    -webkit-transition: 0.2s ease-in-out;
+    -moz-transition: 0.2s ease-in-out;
+}
+
+
 .menu {
-    overflow: hidden;
+/*    overflow: hidden;*/
+    height: 3em;
+    position: relative;
 }
 
 .hamburger, .logo, .login, .basket {
     float: left;
+    margin-left: 10px;
+    position: absolute;
+    z-index: 1;
 }
 
-.logo {
+.logo{
+    font-size: 9px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+/*    text-align: center;*/
+}
+
+.login{
+    font-size: 10px;
+    right: 5em;
+}
+
+.basket{
+/*    width: 0.5em;*/
+    right: 2em;
+}
+
+.basket img{
+    width: 2em;
+}
+
+nav{
+    /*Here You style the menu*/
+/*    display: none;*/
+    width: 100%;
+    max-height: 0;
+    opacity: 0;
+    clear: both;
+    background-color: #fff;
+    list-style: none;
+    margin: 0 auto;
     text-align: center;
+    padding: 10px;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+/*    transition: opacity 0.3s ease-out;*/
+/*    transition: height 0.2s ease-out;*/
+    z-index: 0;
 }
 
-.basket img {
-    width: 5em;
+nav.slidedown{
+/*    display: block;*/
+    max-height: 100vh;
+/*    max-height: 100%;*/
+    opacity: 1;
+    z-index: 10;
+    transition: max-height 0.3s ease-out;
+    padding-top: 100px;
 }
+        
+/*
+li{
+    margin-top: 10px;
+    border-bottom: 2px solid #ffffff;
+    width: 190px;
+    padding: 20px;
+    margin-top: 0;
+    display: inline-block;
+     }
+*/
 
 /*
-.logo{
-    margin: auto;
-    display: inline;
-    float: left;
+a.dropDownLink{
+    text-decoration: none;
+    font-family: @font-base;
+    color: #ffffff;
+    font-size: 25px;
 }
 */
+
+/***************CONTENT START PAGE************/
+
+.banner{
+    background-image: url("Img/banner1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 250px;
+    margin-top: 20px;
+    position: relative;
+}
+
+.register{
+    position: absolute;
+    right: 40px;
+    top: 50%;
+}
+
+
+/****************THIS IS THE MAIN CONTENT*********/
+
+.startContent{
+    overflow: hidden;
+    margin-top: 40px;
+}
+.startContent h2{
+    font-size: 30px;
+    color: #fff;
+/*    margin-bottom: 20px;*/
+}
+
+.box{
+/*
+    background-image: url("Img/orange.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+*/
+    background-color: #999;
+    float: left;
+    height: 9em;
+    width: 48.3%;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.box:nth-child(even){
+    margin-right: 0;
+}
+
+
+
+.startContent img{
+/*    float: left;*/
+    width: 50%;
+/*    margin: 0 20px 10px 0;*/
+}
+
+.startContent p{
+    font-size: 12px;
+}
+
+
+
+/********This is the newsletter banner*********/
+.startNewsletter{
+    overflow: hidden;
+    margin-top: 40px;
+    background-color: var(--light-blue);
+    position: relative;
+    height: 10em;
+}
+
+.newsLetter{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
 
 /*-- Desktop version --*/
 @media (max-width: 1280px) {
