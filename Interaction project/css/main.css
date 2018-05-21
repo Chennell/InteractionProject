@@ -116,7 +116,7 @@ a{
     position: relative;
 }
 
-.hamburger, .logo, .login, .basket {
+.hamburger, .logo, .login-button, .basket {
     float: left;
     margin-left: 10px;
     position: absolute;
@@ -124,21 +124,23 @@ a{
 }
 
 .logo{
-    font-size: 9px;
+    font-size: 10px;
     left: 50%;
-    top: 50%;
+    top: 25%;
     transform: translate(-50%, -50%);
-/*    text-align: center;*/
 }
 
-.login{
+.login-button{
     font-size: 10px;
-    right: 5em;
+    right: 4em;
+    padding: 5px;
+    margin: 0;
+    
 }
 
 .basket{
 /*    width: 0.5em;*/
-    right: 2em;
+    right: 0;
 }
 
 .basket img{
@@ -147,7 +149,6 @@ a{
 
 nav{
     /*Here You style the menu*/
-/*    display: none;*/
     width: 100%;
     max-height: 0;
     opacity: 0;
@@ -159,31 +160,72 @@ nav{
     padding: 10px;
     overflow: hidden;
     transition: max-height 0.3s ease-out;
-/*    transition: opacity 0.3s ease-out;*/
-/*    transition: height 0.2s ease-out;*/
     z-index: 0;
 }
 
 nav.slidedown{
-/*    display: block;*/
     max-height: 100vh;
-/*    max-height: 100%;*/
+    width: 100%;
     opacity: 1;
     z-index: 10;
     transition: max-height 0.3s ease-out;
-    padding-top: 100px;
+    background-color: #fff;
+}
+.main-menu{
+    margin-top: 30px;
+}
+
+.main-menu li img{
+    width: 15px;
+    float: right;
+}
+
+nav.closing{
+    transition: max-height 0.3s ease-in;
+    max-height: 0;
 }
         
-/*
-li{
+.main-menu li{
     margin-top: 10px;
-    border-bottom: 2px solid #ffffff;
     width: 190px;
-    padding: 20px;
+    padding: 5px;
     margin-top: 0;
-    display: inline-block;
-     }
-*/
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    border-bottom: 1px solid #999;
+}
+
+/*The styling of the sub menu*/
+ul.submenu{
+    padding-left: 10px;
+    font-size: 12px;
+    list-style: none;
+    margin-top: 0;
+    border-bottom: #fff solid 1px;
+    max-height: 0;
+    transition: max-height 0.3s ease-out;
+    opacity: 0;
+}
+
+.submenu li{
+    background-color: #ddd;
+}
+
+.open-submenu #menu-item-education{
+    background-color: grey;
+}
+
+.open-submenu ul.submenu{
+    max-height: 100%;
+    transition: max-height 0.3s ease-out;
+    opacity: 1;
+}
+
+.open-submenu li img.education-arrow{
+    transform: translateY(0px) rotateZ(180deg);
+    transition: 0.3s ease-in-out;
+}
 
 /*
 a.dropDownLink{
@@ -197,7 +239,7 @@ a.dropDownLink{
 /***************CONTENT START PAGE************/
 
 .banner{
-    background-image: url("Img/banner1.jpg");
+    background-image: url("../img/banner1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     height: 250px;
@@ -207,8 +249,9 @@ a.dropDownLink{
 
 .register{
     position: absolute;
-    right: 40px;
+    right: 0px;
     top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 
@@ -216,20 +259,10 @@ a.dropDownLink{
 
 .startContent{
     overflow: hidden;
-    margin-top: 40px;
-}
-.startContent h2{
-    font-size: 30px;
-    color: #fff;
-/*    margin-bottom: 20px;*/
+    margin-top: 20px;
 }
 
-.box{
-/*
-    background-image: url("Img/orange.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-*/
+.start-box{
     background-color: #999;
     float: left;
     height: 9em;
@@ -238,28 +271,21 @@ a.dropDownLink{
     margin-bottom: 10px;
 }
 
-.box:nth-child(even){
+.start-box:nth-child(even){
     margin-right: 0;
 }
 
-
-
-.startContent img{
-/*    float: left;*/
-    width: 50%;
-/*    margin: 0 20px 10px 0;*/
+.start-box h2{
+    font-size: 15px;
+    color: #fff;
+    margin-left: 10px;
 }
-
-.startContent p{
-    font-size: 12px;
-}
-
 
 
 /********This is the newsletter banner*********/
 .startNewsletter{
     overflow: hidden;
-    margin-top: 40px;
+    margin-top: 20px;
     background-color: var(--light-blue);
     position: relative;
     height: 10em;
@@ -273,12 +299,55 @@ a.dropDownLink{
 }
 
 
+/********FOOTER*********/
+footer{
+    background-color: #666; 
+    height: 50px
+}
+
+footer p{
+    color: #444;
+    text-align: center;
+    padding-top: 15px;
+    font-size: 10px;
+}
+
+
 
 
 /*-- Desktop version --*/
-@media (max-width: 1280px) {
-    nav {
-        
+@media (min-width: 640px){
+    
+    .logo{
+        left:5em;  
     }
+    .login-button{
+        font-size: 15px;
+    }
+    
+    .hamburger{
+        display: none;
+    }
+    nav {
+        display: inline-block;
+        max-height: 200px;
+        clear: none;
+        opacity: 1;
+        background-color: transparent;
+    }
+    .main-menu li{
+        display: inline;
+        border-bottom: none;
+    }
+    
+    .main-menu li img{
+        display: none;
+    }
+}
+
+
+@media (max-width: 1280px) {
+    
+
 }
 
