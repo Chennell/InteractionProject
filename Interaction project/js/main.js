@@ -16,14 +16,11 @@ $(document).ready(function(){
         if(opened){
             $("nav").addClass("closing");
             $("nav").removeClass("slidedown");
-//            $(".line").removeClass("cross");
-            console.log("Menu works again");
             opened = false;
             
         } else {
             $("nav").addClass("slidedown");
             $("nav").removeClass("closing");
-            console.log("Menu works");
             opened = true;
             
         }
@@ -33,20 +30,10 @@ $(document).ready(function(){
     
 
     //For the dropdown menu under education
-    $('#menu-item-education').click(function(submenu){
-        submenu.preventDefault();
+    $('#menu-item-education').click(function(e){
+        e.preventDefault();
         
-        if(submenu){
-            $(".main-menu").addClass("open-submenu");
-            $(".main-menu").removeClass("close-submenu");
-            console.log("it works");
-            submenu = true; 
-            
-        } else {
-            $(".main-menu").addClass("close-submenu");
-            $(".main-menu").removeClass("open-submenu");
-            submenu = false;
-            console.log("it works again");
-        }
+        $(".main-menu").toggleClass("open-submenu");
+
 	});
 });

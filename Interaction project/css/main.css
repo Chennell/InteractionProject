@@ -114,6 +114,7 @@ a{
 /*    overflow: hidden;*/
     height: 3em;
     position: relative;
+    z-index: 10;
 }
 
 .hamburger, .logo, .login-button, .basket {
@@ -159,18 +160,25 @@ nav{
     text-align: center;
     padding: 10px;
     overflow: hidden;
-    transition: max-height 0.3s ease-out;
-    z-index: 0;
+    transition: max-height 1s ease-out;
+/*    z-index: 0;*/
 }
 
 nav.slidedown{
     max-height: 100vh;
     width: 100%;
     opacity: 1;
-    z-index: 10;
-    transition: max-height 0.3s ease-out;
+/*    z-index: 10;*/
+/*    transition: max-height 1s ease-out;*/
     background-color: #fff;
 }
+nav.closing{
+    transition: max-height 0.3s ease-out;
+    transition: max-height 1s ease-out;
+    max-height: 0;
+    opacity: 0;
+}
+
 .main-menu{
     margin-top: 30px;
 }
@@ -179,12 +187,7 @@ nav.slidedown{
     width: 15px;
     float: right;
 }
-
-nav.closing{
-    transition: max-height 0.3s ease-in;
-    max-height: 0;
-}
-        
+       
 .main-menu li{
     margin-top: 10px;
     width: 190px;
@@ -212,17 +215,24 @@ ul.submenu{
     background-color: #ddd;
 }
 
-.open-submenu #menu-item-education{
+.open-submenu .main-menu li{
     background-color: grey;
 }
 
 .open-submenu ul.submenu{
     max-height: 100%;
     transition: max-height 0.3s ease-out;
+     -webkit-transition: max-height 0.3s ease-out;
     opacity: 1;
 }
 
-.open-submenu li img.education-arrow{
+/* Changes the arrow up and down*/
+li img.menu-arrow{
+    transform: translateY(0px) rotateZ(0deg);
+    transition: 0.3s ease-in-out;
+}
+
+.open-submenu li img.menu-arrow{
     transform: translateY(0px) rotateZ(180deg);
     transition: 0.3s ease-in-out;
 }
@@ -245,6 +255,7 @@ a.dropDownLink{
     height: 250px;
     margin-top: 20px;
     position: relative;
+/*    z-index: 0;*/
 }
 
 .register{
@@ -338,11 +349,31 @@ footer p{
     .main-menu li{
         display: inline;
         border-bottom: none;
+        font-size: 12px;
     }
     
-    .main-menu li img{
+    .main-menu .menu-arrow{
         display: none;
     }
+    
+    #menu-item-education{
+        position: absolute;
+        display: inline-block;
+    }
+    
+    .submenu{
+        position: absolute;
+        left: 15px;
+        top: 16px;
+        padding: 10px 0 0 0;
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+        z-index: 5;
+        font-size: 12px;
+    }
+
 }
 
 
