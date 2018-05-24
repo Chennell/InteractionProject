@@ -131,6 +131,10 @@ a{
     transform: translate(-50%, -50%);
 }
 
+.logobig{
+    display: none;
+}
+
 .login-button{
     font-size: 10px;
     right: 4em;
@@ -153,34 +157,24 @@ nav{
     width: 100%;
     max-height: 0;
     opacity: 0;
-    clear: both;
     background-color: #fff;
     list-style: none;
-    margin: 0 auto;
-    text-align: center;
     padding: 10px;
     overflow: hidden;
-    transition: max-height 1s ease-out;
-/*    z-index: 0;*/
+    transition: max-height 0.3s ease-out;
 }
 
 nav.slidedown{
-    max-height: 100vh;
+    max-height: 450px;
     width: 100%;
     opacity: 1;
-/*    z-index: 10;*/
-/*    transition: max-height 1s ease-out;*/
-    background-color: #fff;
-}
-nav.closing{
     transition: max-height 0.3s ease-out;
-    transition: max-height 1s ease-out;
-    max-height: 0;
-    opacity: 0;
+    background-color: #fff;
 }
 
 .main-menu{
     margin-top: 30px;
+    padding-right: 10px;
 }
 
 .main-menu li img{
@@ -190,40 +184,38 @@ nav.closing{
        
 .main-menu li{
     margin-top: 10px;
-    width: 190px;
+    width: 100%;
     padding: 5px;
     margin-top: 0;
     text-align: left;
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
-    border-bottom: 1px solid #999;
 }
 
+.main-menu >li{
+    border-bottom: solid 1px #ddd;
+
+}
 /*The styling of the sub menu*/
 ul.submenu{
     padding-left: 10px;
     font-size: 12px;
     list-style: none;
     margin-top: 0;
-    border-bottom: #fff solid 1px;
     max-height: 0;
     transition: max-height 0.3s ease-out;
     opacity: 0;
-}
-
-.submenu li{
     background-color: #ddd;
 }
 
-.open-submenu .main-menu li{
-    background-color: grey;
+.open-submenu ul.submenu{
+    max-height: 200px;
+    transition: max-height 0.3s ease-out;
+    opacity: 1;
 }
 
-.open-submenu ul.submenu{
-    max-height: 100%;
-    transition: max-height 0.3s ease-out;
-     -webkit-transition: max-height 0.3s ease-out;
-    opacity: 1;
+.submenu a{
+    color: #000;
 }
 
 /* Changes the arrow up and down*/
@@ -232,27 +224,22 @@ li img.menu-arrow{
     transition: 0.3s ease-in-out;
 }
 
-.open-submenu li img.menu-arrow{
+li.open-submenu img.menu-arrow{
     transform: translateY(0px) rotateZ(180deg);
     transition: 0.3s ease-in-out;
 }
 
-/*
-a.dropDownLink{
-    text-decoration: none;
-    font-family: @font-base;
-    color: #ffffff;
-    font-size: 25px;
-}
-*/
-
 /***************CONTENT START PAGE************/
 
 .banner{
+/*
     background-image: url("../img/banner1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    height: 250px;
+*/
+    background-color: #999; 
+    height: 10em;
+    width: 100;
     margin-top: 20px;
     position: relative;
 /*    z-index: 0;*/
@@ -329,51 +316,111 @@ footer p{
 /*-- Desktop version --*/
 @media (min-width: 640px){
     
-    .logo{
-        left:5em;  
-    }
-    .login-button{
+    .button{
         font-size: 15px;
+    }
+    
+    .logo{
+        left: 9em;  
+    }
+    
+    .logobig{
+        display: block;
+    }
+    .logosmall{
+        display: none;
     }
     
     .hamburger{
         display: none;
     }
+    
     nav {
-        display: inline-block;
+        display: block;
         max-height: 200px;
         clear: none;
         opacity: 1;
         background-color: transparent;
-    }
-    .main-menu li{
-        display: inline;
+        overflow: inherit;
+        text-align: center;
         border-bottom: none;
-        font-size: 12px;
     }
     
-    .main-menu .menu-arrow{
+    nav.main-menu{
+        display: block;
+/*        transition: max-height 0.5s ease-out, opacity 0.5s ease-out;*/
+    }
+    
+    .main-menu{
+        margin-top: 50px;
+    }
+    
+    .main-menu li{
+        display: inline;
+        font-size: 12px;
+        position: relative;
+        padding: 10px 10px;
+        transition: background-color 0.3s ease-out;
+    }
+    .main-menu > li:hover{
+        background-color: #ddd;
+    }
+    
+    .main-menu >li{
+        border-bottom: none;
+    }
+    
+    .main-menu img.menu-arrow{
         display: none;
     }
     
-    #menu-item-education{
+    ul.submenu {
         position: absolute;
+        left: 0px;
+        top: 20px;
+        padding: 0;
+        margin-top: 10px;
+        opacity: 0;
+        max-height: 0;
+        width: 190px;
+        transition: max-height 0.3s ease-out;
+        font-size: 12px;
+        background-color: #fff;
+    }
+    
+    .submenu a{
+        padding: 5px 5px;
+        transition: color 0.3s ease-out;
         display: inline-block;
     }
     
-    .submenu{
-        position: absolute;
-        left: 15px;
-        top: 16px;
-        padding: 10px 0 0 0;
-        opacity: 0;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
-        z-index: 5;
-        font-size: 12px;
+    .submenu a:hover{
+        color: var(--light-blue);        
     }
-
+    
+    .main-menu li:hover .submenu{
+        opacity: 1;
+        max-height: 500px;
+    }
+    
+    .main-menu li img.search-icon{
+        float: inherit;
+        padding-left: 10px;
+    }
+    
+    
+/******The content********/
+    .banner{
+        height: 400px;
+    }
+    
+    .maincontent{
+        margin-top: 50px;
+    }
+    
+    footer p{
+        font-size: 15px;
+    }
 }
 
 
