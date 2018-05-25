@@ -1,11 +1,9 @@
-/*****This is the menu******/
-//Here we set the variable Opened to flase
-//var submenu = false;
 
-//Waits for the document to be ready
 $(document).ready(function(){
-    
-    
+
+  cookie();
+
+/*****This is the menu******/
     //This is the function that open and closes the menu
 	$('.hamburger').click(function(mainMenu){
         mainMenu.preventDefault();
@@ -13,41 +11,65 @@ $(document).ready(function(){
         //Here we add a toggleClass to all the children in hamburger, wich is all the lines, so that it will responed to the styling making it to a cross
 		$('.hamburger').children().toggleClass('open');
 	});
-    
 
-  
-    //For the dropdown menu under education
+    //For the dropdown menu
     $('.main-menu > li').click(function(e){
-       // e.preventDefault();
-
-//        $(".main-menu").toggleClass("open-submenu");
-
         var current = $(".main-menu >li");
-
         if ($(window).width() < 640) {
-            
             current.removeClass("open-submenu").find("ul.submenu");
-            
-            if ( $(".main-menu > li").hasClass(".open-submenu")) {
-                $(".submenu > li > a").removeAttr("tabindex");
-                console.log("Hallo!");
-            }
-            
 
             var openNew = $ (this).find(".inner-li").outerHeight();
             $(this).addClass("open-submenu").find("ul.submenu")
-        
-        }else{
+        } else {
             current.removeClass("open-submenu");
         }
 
     });
-    
-    
-    //Will this function make it possible to click the submenu? we have to wait to see. 
-//        $(".main-menu > li >a").on("click", function(clickItem) {
-//        return false;
-//        e.stopPropagation();
-//
-//    });
+
+  /* -- JULIAS JQUERY -- */
+
+  //var education = "education.html";
+  //var pathname = window.alert(this.href.substr(this.href.lastIndexOf('/') + 1));
+
+  // if (pathname == education){
+  //     notification();
+  // }
+
+  //var href = location.href;
+  //console.log(href.match(/([^\/]*)\/*$/)[1]);
+
+  function notification() {
+    //NOTIFICATION
+    $(".notification-box").addClass("slide-up");
+
+    $(".yes-btn").click( function(event) {
+      event.preventDefault();
+      $(".notification-box").addClass("slide-left");
+      setTimeout(xdown, 10000);
+    });
+
+    $(".no-btn").click( function(event) {
+      event.preventDefault();
+      $(".notification-box").addClass("slide-down");
+    });
+
+    $(".x").click( function(event) {
+      event.preventDefault();
+      $(".notification-box").addClass("slide-down-x");
+    });
+  }
+  //SET TIMEOUT NOTIFICATION
+  function xdown() {
+    $(".notification-box").addClass("slide-down-x");
+  }
+
+  function cookie() {
+    //COOKIE
+    $(".cookie-box").addClass("slide-up");
+
+    $(".cookie-ok").click( function(event) {
+      event.preventDefault();
+      $(".cookie-box").addClass("slide-down");
+    });
+  }
 });
