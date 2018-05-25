@@ -190,6 +190,7 @@ nav.slidedown{
     text-align: left;
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
+    overflow: hidden;
 }
 
 .main-menu >li{
@@ -212,6 +213,7 @@ ul.submenu{
     max-height: 200px;
     transition: max-height 0.3s ease-out;
     opacity: 1;
+    z-index: 200;
 }
 
 .submenu a{
@@ -320,9 +322,6 @@ footer p{
         font-size: 15px;
     }
     
-    .logo{
-        left: 9em;  
-    }
     
     .logobig{
         display: block;
@@ -331,6 +330,29 @@ footer p{
         display: none;
     }
     
+    
+    
+    
+/******The content********/
+    .banner{
+        height: 400px;
+    }
+    
+    .maincontent{
+        margin-top: 50px;
+    }
+    
+    footer p{
+        font-size: 15px;
+    }
+}
+
+/*****The second media query******/
+@media (min-width: 1036px) {
+    
+        .logo{
+        left: 9em;  
+    }
     .hamburger{
         display: none;
     }
@@ -407,25 +429,6 @@ footer p{
         float: inherit;
         padding-left: 10px;
     }
-    
-    
-/******The content********/
-    .banner{
-        height: 400px;
-    }
-    
-    .maincontent{
-        margin-top: 50px;
-    }
-    
-    footer p{
-        font-size: 15px;
-    }
-}
-
-
-@media (max-width: 1280px) {
-    
 
 }
 

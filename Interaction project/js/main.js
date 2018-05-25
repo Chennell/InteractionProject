@@ -18,17 +18,25 @@ $(document).ready(function(){
   
     //For the dropdown menu under education
     $('.main-menu > li').click(function(e){
-        e.preventDefault();
+       // e.preventDefault();
 
 //        $(".main-menu").toggleClass("open-submenu");
 
         var current = $(".main-menu >li");
 
         if ($(window).width() < 640) {
+            
             current.removeClass("open-submenu").find("ul.submenu");
+            
+            if ( $(".main-menu > li").hasClass(".open-submenu")) {
+                $(".submenu > li > a").removeAttr("tabindex");
+                console.log("Hallo!");
+            }
+            
 
             var openNew = $ (this).find(".inner-li").outerHeight();
             $(this).addClass("open-submenu").find("ul.submenu")
+        
         }else{
             current.removeClass("open-submenu");
         }
