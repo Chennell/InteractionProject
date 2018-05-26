@@ -26,50 +26,53 @@ $(document).ready(function(){
 
     });
 
-  /* -- JULIAS JQUERY -- */
 
-  //var education = "education.html";
-  //var pathname = window.alert(this.href.substr(this.href.lastIndexOf('/') + 1));
-
-  // if (pathname == education){
-  //     notification();
-  // }
-
-  //var href = location.href;
-  //console.log(href.match(/([^\/]*)\/*$/)[1]);
-
-  function notification() {
-    //NOTIFICATION
-    $(".notification-box").addClass("slide-up");
-
-    $(".yes-btn").click( function(event) {
-      event.preventDefault();
-      $(".notification-box").addClass("slide-left");
-      setTimeout(xdown, 10000);
-    });
-
-    $(".no-btn").click( function(event) {
-      event.preventDefault();
-      $(".notification-box").addClass("slide-down");
-    });
-
-    $(".x").click( function(event) {
-      event.preventDefault();
-      $(".notification-box").addClass("slide-down-x");
-    });
-  }
-  //SET TIMEOUT NOTIFICATION
-  function xdown() {
-    $(".notification-box").addClass("slide-down-x");
-  }
-
-  function cookie() {
-    //COOKIE
-    $(".cookie-box").addClass("slide-up");
-
-    $(".cookie-ok").click( function(event) {
-      event.preventDefault();
-      $(".cookie-box").addClass("slide-down");
-    });
-  }
 });
+
+
+function cookie() {
+  //COOKIE
+  $(".cookie-box").addClass("slide-up");
+
+  $(".cookie-ok").click( function(event) {
+    event.preventDefault();
+    $(".cookie-box").addClass("slide-down");
+  });
+}
+
+/* -- JULIAS JQUERY -- */
+
+function notification() {
+  //NOTIFICATION
+  $(".notification-box").addClass("slide-up");
+
+  $(".yes-btn").click( function(event) {
+    event.preventDefault();
+    $(".notification-box").addClass("slide-left");
+    setTimeout(xdown, 10000);
+  });
+
+  $(".no-btn").click( function(event) {
+    event.preventDefault();
+    $(".notification-box").addClass("slide-down");
+  });
+
+  $(".x").click( function(event) {
+    event.preventDefault();
+    $(".notification-box").addClass("slide-down-x");
+  });
+}
+//SET TIMEOUT NOTIFICATION
+function xdown() {
+  $(".notification-box").addClass("slide-down-x");
+}
+
+function cookie() {
+  //COOKIE
+  $(".cookie-box").addClass("slide-up");
+
+  $(".cookie-ok").click( function(event) {
+    event.preventDefault();
+    $(".cookie-box").addClass("slide-down");
+  });
+}

@@ -515,11 +515,15 @@ li .li-txt {}
 
 /******The content start page********/
     .banner{
-        height: 15em;
+      height: 15em;
     }
 
     footer p{
-        font-size: 15px;
+      font-size: 15px;
+    }
+
+    main {
+      margin-top: 50px;
     }
 
     ul .e-ul{
@@ -627,10 +631,6 @@ li .li-txt {}
     .main-menu li img.search-icon{
         float: inherit;
         padding-left: 10px;
-    }
-    
-    main{
-        margin-top: 50px;
     }
 
 }
