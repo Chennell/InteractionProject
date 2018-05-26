@@ -513,13 +513,9 @@ li .li-txt {}
         display: none;
     }
 
-/******The content********/
+/******The content start page********/
     .banner{
-        height: 400px;
-    }
-
-    .maincontent{
-        margin-top: 50px;
+        height: 15em;
     }
 
     footer p{
@@ -631,6 +627,10 @@ li .li-txt {}
     .main-menu li img.search-icon{
         float: inherit;
         padding-left: 10px;
+    }
+    
+    main{
+        margin-top: 50px;
     }
 
 }

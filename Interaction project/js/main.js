@@ -15,7 +15,7 @@ $(document).ready(function(){
     //For the dropdown menu
     $('.main-menu > li').click(function(e){
         var current = $(".main-menu >li");
-        if ($(window).width() < 640) {
+        if ($(window).width() < 1036) {
             current.removeClass("open-submenu").find("ul.submenu");
 
             var openNew = $ (this).find(".inner-li").outerHeight();
