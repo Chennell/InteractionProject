@@ -73,6 +73,7 @@ a{
 .registercontainer{
   position: relative;
   width: 85%;
+  max-width: 600px;
   margin: 0 auto;
   overflow: hidden;
   border: 2px solid;
@@ -95,10 +96,11 @@ a{
 
 }
 
-.registercontainer label{
+.registercontainer label p{
   font-size: 16px;
   margin-top: 10px;
 }
+
 
 .inner_steps_container.next-step2{
   transform:translateX(-33%);
@@ -108,7 +110,7 @@ a{
 }
 
 form{
-  padding: 20px;
+  padding: 0 20px;
 }
 
 h3{
@@ -117,10 +119,10 @@ h3{
 
 /* Progressbar */
 .progressbar{
-  height: 30px;
-  margin: 20px 0;
+  height: 45px;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: 50% 50%;
+  margin: 20px auto;
 	background-size: 80%;
 
 }
@@ -142,7 +144,7 @@ h3{
 
 
 /* Question marks next to labels */
-p.helptext{
+#helptext{
   font-size: 12px;
   font-style: italic;
   color: var(--dark-grey);
@@ -161,7 +163,7 @@ p.helptext{
   position: relative;
 
 }
-.qtext{
+#qtext{
   color: var(--dark-grey);
   font-size: 10px;
   line-height: 12px;
@@ -278,4 +280,27 @@ label.error2 .errormessage2 {
  .go_to_home, .go_to_profile{
    display: block;
    margin: 20px auto;
+ }
+
+
+
+
+
+ /*-- Desktop version --*/
+ @media (min-width: 640px){
+
+   .button{
+       font-size: 15px;
+   }
+
+   .progressbar{
+     height: 60px;
+   }
+
+   form{
+     padding: 0 40px;
+   }
+
+
+
  }

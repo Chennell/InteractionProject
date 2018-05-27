@@ -28,26 +28,29 @@
 
             <form id="step1_form" novalidate="novalidate">
               <h3>Personal information</h3>
-              <label for="">First name
+              <label for="">
+                <p>First name</p>
                 <input type="text" name="firstname" class="firstname" required="required">
                   <div class="errormessage">
                      <p>Please enter your first name</p>
                   </div>
               </label>
 
-              <label for="">Last name
+              <label for="">
+                <p>Last name</p>
                  <input type="text" name="lastname" required="required" class="lastname">
                  <div class="errormessage">
                     <p>Please enter your last name</p>
                  </div>
               </label>
 
-              <label class="label_email">Email
-                <p class="helptext">This will be your username</p>
+              <label class="label_email">
+                <p>Email</p>
+                <p id="helptext">This will be your username</p>
                 <input type="email" name="email" required="required" class="email">
                 <div class="qmark">
                   <div class="qtext_div">
-                    <p class="qtext">Please enter a valid email, example fredrik@fredrik.se..</p>
+                    <p id="qtext">Please enter a valid email, example fredrik@fredrik.se.</p>
                   </div>
                 </div>
                 <div class="errormessage">
@@ -55,11 +58,12 @@
                 </div>
               </label>
 
-              <label class="label_pw">Password
+              <label class="label_pw">
+                <p>Password</p>
                 <input type="password" name="pw" required="required" class="password">
                 <div class="qmark">
                  <div class="qtext_div">
-                   <p class="qtext">Password explanation</p>
+                   <p id="qtext">Password explanation</p>
                 </div>
               </div>
                 <div class="errormessage">
@@ -67,11 +71,12 @@
                 </div>
               </label>
 
-              <label class="label_con_pw">Confirm password
+              <label class="label_con_pw">
+                <p>Confirm password</p>
                 <input type="password" name="conpw" required="required" class="con_password">
                 <div class="qmark">
                   <div class="qtext_div">
-                    <p class="qtext">Please enter the same password as abouve.</p>
+                    <p id="qtext">Please enter the same password as above.</p>
                   </div>
                 </div>
                 <div class="errormessage">
@@ -93,7 +98,8 @@
               <form id="step2_form" novalidate="novalidate">
                 <h3>Professional information</h3>
 
-                <label for="">Choose profession
+                <label for="">
+                  <p>Choose profession</p>
                   <select  name="profession" required="required" id="profession">
                     <option value="" selected disabled >...</option>
                     <option value="Doctor">Doctor</option>
@@ -102,7 +108,7 @@
                   </select>
                   <div class="qmark">
                     <div class="qtext_div">
-                      <p class="qtext">Please choose your profession.</p>
+                      <p id="qtext">Please choose your profession.</p>
                     </div>
                   </div>
                   <div class="errormessage">
@@ -110,11 +116,12 @@
                   </div>
                 </label>
 
-                <label for="">Speciality
+                <label for="">
+                  <p>Speciality</p>
                    <input type="text" name="speciality" required="required" >
                    <div class="qmark">
                      <div class="qtext_div">
-                       <p class="qtext">Please tell us what your speciality is</p>
+                       <p id="qtext">Please tell us what your speciality is</p>
                      </div>
                    </div>
                    <div class="errormessage">
@@ -122,11 +129,12 @@
                    </div>
                 </label>
 
-                <label for="">Workplace
+                <label for="">
+                  <p>Workplace</p>
                   <input type="text" name="workplace" required="required">
                   <div class="qmark">
                     <div class="qtext_div">
-                      <p class="qtext">Please enter your workplace.</p>
+                      <p id="qtext">Please enter your workplace.</p>
                     </div>
                   </div>
                   <div class="errormessage">
@@ -134,7 +142,8 @@
                   </div>
                 </label>
 
-                <label for="">City
+                <label for="">
+                  <p>City</p>
                   <select name="city" required="required" id="city">
                     <option value="" selected disabled hidden>...</option>
                     <option value="Stockholm">Stockholm</option>
@@ -143,7 +152,7 @@
                   </select>
                   <div class="qmark">
                     <div class="qtext_div">
-                      <p class="qtext">Please enter the city of your workplace</p>
+                      <p id="qtext">Please enter the city of your workplace</p>
                     </div>
                   </div>
                   <div class="errormessage">
@@ -158,7 +167,6 @@
                 <input type="submit" name="" value="Register" class="register button">
               </form >
             </div>
-
 
 
           <!-- Step 3 -->

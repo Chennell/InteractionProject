@@ -5,12 +5,12 @@
 		<meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,600i,700|Open+Sans:400,400i,600,700" rel="stylesheet">
-		<link href="main.css" type="text/css" rel="stylesheet" />
+		<link href="css/main.css" type="text/css" rel="stylesheet" />
         <script src="js/jquery-3.2.1.min.js"></script>
         <script src="js/main.js"></script>
 	</head>
 	<body>
-        <header> 
+        <header>
             <div class="menu">
                 <div class="hamburger">
                     <div class="line one"></div>
@@ -18,68 +18,122 @@
                     <div class="line three"></div>
                 </div>
 
-                <div class="logo"> <h1>Pharmacutical inc.</h1> </div>
-                <a href="#" class="login button">
+                <div class="logo"> <h1 class="logosmall">Pharm inc.</h1> <h1 class="logobig">Pharmacutical inc.</h1> </div>
+                <a href="#" class="login-button button">
                         <p>Login</p>
                </a>
 
                <div class="basket">
-                   <img src="Img/basket.png" alt="">
+                   <img src="img/basket.png" alt="">
                </div>
                 <nav>
-                    <ul>
-                        <li>Products</li>
-                        <li>Education</li>
-                            <ul>
-                                <li>Medical Educations</li>
-                                <li>Elearning</li>
-                                <li>Educational videos</li>
-                                <li>Educational slides</li>
-                                <li>Educational forum</li>
+                    <ul class="main-menu">
+                        <li>Products <img src="img/menu-arrow.png" class="menu-arrow" alt="">
+                            <ul class="submenu">
+                                <li><a href=""  >All products</a></li>
+                                <li><a href=""  >Cardio Vascular</a></li>
+                                <li><a href=""  >Respiratory</a></li>
+                                <li><a href=""  >Diabetes</a></li>
+                                <li><a href=""  >Oncology</a></li>
                             </ul>
-                        <li>Therapy areas</li>
-                        <li>Free patient material</li>
-                        <li>News and events</li>
-                        <li>Contact & information</li>
-                        <li>About</li>
-                        <li><img src="Img/search.png" alt=""></li>  
+                        </li>
+                        <li>Education <img src="img/menu-arrow.png" class="menu-arrow" alt="">
+                            <ul class="submenu">
+                                <li><a href="">Medical Educations</a></li>
+                                <li class="education-link"><a href="education.html">E-learning</a> </li>
+                                <li><a href=""  >Educational videos</a></li>
+                                <li><a href=""  >Educational slides</a></li>
+                                <li><a href=""  >Educational forum</a></li>
+                            </ul>
+                        </li>
+                        <li>Therapy areas <img src="img/menu-arrow.png" class="menu-arrow" alt="">
+                            <ul class="submenu">
+                                <li><a href="">Oncology</a></li>
+                                <li><a href="">Diabetes</a></li>
+                                <li><a href="">Respiratory</a></li>
+                                <li><a href="">Cardio Vascular</a></li>
+                            </ul>
+                        </li>
+                        <li>Free patient material <img src="img/menu-arrow.png" class="menu-arrow" alt="">
+                            <ul class="submenu">
+                                <li><a href="">Order Materials</a></li>
+                            </ul>
+                        </li>
+                        <li>News and events <img src="img/menu-arrow.png" class="menu-arrow" alt="">
+                            <ul class="submenu">
+                                <li><a href="">Science</a></li>
+                                <li><a href="">Network</a></li>
+                                <li><a href="">Newsletter</a></li>
+                            </ul>
+                        </li>
+                        <li>Contact & information <img src="img/menu-arrow.png" class="menu-arrow" alt="">
+                            <ul class="submenu">
+                                <li><a href="">Contact form</a></li>
+                                <li><a href="">Customer service</a></li>
+                                <li><a href="">FAQ</a></li>
+                            </ul>
+                        </li>
+                        <li>About<img src="img/menu-arrow.png" class="menu-arrow" alt="">
+                            <ul class="submenu">
+                                <li><a href="">About pharm inc.</a></li>
+                                <li><a href="">Collaborations</a></li>
+                                <li><a href="">Sustainability</a></li>
+                                <li><a href="">Board & Management</a></li>
+                                <li><a href="">Press material</a></li>
+                            </ul>
+                        </li>
+                        <li>Search<img class="search-icon" src="img/search.png" alt=""></li>
                     </ul>
                 </nav>
 
             </div>
             <hr>
         </header>
-        <main>
+        <main class="maincontent">
             <div class="banner">
                 <a href="#" class=" register button">
                     <p>Register</p>
                 </a>
-                
+
             </div>
 
             <div class="startContent">
 <!--                <h2>Pharmcutical inc.</h2>-->
-               <div class="box box-one">
+               <div class="start-box">
 <!--                    <img src="Img/orange.jpg" alt="">-->
-                    <h2>Orange</h2>
+                    <h2>Content 1</h2>
                 </div>
-                <div class="box box-two">
+                <div class="start-box">
 <!--                    <img src="Img/orange.jpg" alt="">-->
-                    <h2>Orange</h2>
+                    <h2>Content 2</h2>
                 </div>
-                <div class="box box-three">
+                <div class="start-box">
 <!--                    <img src="Img/orange.jpg" alt="">-->
-                    <h2>Orange</h2>
+                    <h2>Content 3</h2>
                 </div>
-                <div class="box box-four">
+                <div class="start-box">
 <!--                    <img src="Img/orange.jpg" alt="">-->
-                    <h2>Orange</h2>
+                    <h2>Content 4</h2>
                 </div>
             </div>
-            
+
             <div class="startNewsletter">
                 <a href="#" class=" newsLetter button"> <p>Sign up for Newsletter</p></a>
             </div>
+
+						<div class="cookie-overflow">
+							<div class="cookie-box">
+				        <div class="cookie-1">
+				           <h2>Cookies</h2>
+				            <p>To make your experience as good as possible we are collecting cookies. <a href="#">Read more</a>.</p>
+				            <a href="" class="cookie-ok">Ok</a>
+				        </div>
+							</div>
+						</div>
+
         </main>
+        <footer>
+            <p>All rights reserved to Parmacutical inc.®</p>
+        </footer>
 	</body>
 </html>
