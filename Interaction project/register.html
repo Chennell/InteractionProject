@@ -1,69 +1,176 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
+     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,600i,700|Open+Sans:400,400i,600,700" rel="stylesheet">
+    <link href="css/register.css" type="text/css" rel="stylesheet" />
+        <script src="js/jquery-3.2.1.min.js"></script>
+        <script src="js/register.js"></script>
   </head>
   <body>
     <main>
+      <!-- Register info -->
       <div class="registerinfo">
         <h2>Register</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       </div>
 
+      <!-- Register steps -->
       <div class="registercontainer">
-        <div class="reg-step1">
-          <div class="registerbar">
-            Here comes the registerbar!
+        <div class="inner_steps_container">
+
+            <!--     Step 1       -->
+            <div class="reg-step1 reg_step">
+              <!-- Register progress bar -->
+              <div class="progressbar probar1"></div>
+
+            <form id="step1_form" novalidate="novalidate">
+              <h3>Personal information</h3>
+              <label for="">First name
+                <input type="text" name="firstname" class="firstname" required="required">
+                  <div class="errormessage">
+                     <p>Please enter your first name</p>
+                  </div>
+              </label>
+
+              <label for="">Last name
+                 <input type="text" name="lastname" required="required" class="lastname">
+                 <div class="errormessage">
+                    <p>Please enter your last name</p>
+                 </div>
+              </label>
+
+              <label class="label_email">Email
+                <p class="helptext">This will be your username</p>
+                <input type="email" name="email" required="required" class="email">
+                <div class="qmark">
+                  <div class="qtext_div">
+                    <p class="qtext">Please enter a valid email, example fredrik@fredrik.se..</p>
+                  </div>
+                </div>
+                <div class="errormessage">
+                   <p>Please enter your email</p>
+                </div>
+              </label>
+
+              <label class="label_pw">Password
+                <input type="password" name="pw" required="required" class="password">
+                <div class="qmark">
+                 <div class="qtext_div">
+                   <p class="qtext">Password explanation</p>
+                </div>
+              </div>
+                <div class="errormessage">
+                    <p>Please enter a password</p>
+                </div>
+              </label>
+
+              <label class="label_con_pw">Confirm password
+                <input type="password" name="conpw" required="required" class="con_password">
+                <div class="qmark">
+                  <div class="qtext_div">
+                    <p class="qtext">Please enter the same password as abouve.</p>
+                  </div>
+                </div>
+                <div class="errormessage">
+                    <p>Please choose a password</p>
+                </div>
+                <div class="errormessage2">
+                    <p>The passwords do not match</p>
+                </div>
+              </label>
+
+                <input type="submit" name="" value="Continue" class="continue button">
+              </form>
+            </div>
+
+
+            <!--     Step 2       -->
+            <div class="reg-step2 reg_step">
+              <div class="progressbar probar2"></div>
+              <form id="step2_form" novalidate="novalidate">
+                <h3>Professional information</h3>
+
+                <label for="">Choose profession
+                  <select  name="profession" required="required" id="profession">
+                    <option value="" selected disabled >...</option>
+                    <option value="Doctor">Doctor</option>
+                    <option value="Surgeon">Surgeon</option>
+                    <option value="Nurse">Nurse</option>
+                  </select>
+                  <div class="qmark">
+                    <div class="qtext_div">
+                      <p class="qtext">Please choose your profession.</p>
+                    </div>
+                  </div>
+                  <div class="errormessage">
+                       <p>Please select your profession</p>
+                  </div>
+                </label>
+
+                <label for="">Speciality
+                   <input type="text" name="speciality" required="required" >
+                   <div class="qmark">
+                     <div class="qtext_div">
+                       <p class="qtext">Please tell us what your speciality is</p>
+                     </div>
+                   </div>
+                   <div class="errormessage">
+                      <p>Please enter your speciality</p>
+                   </div>
+                </label>
+
+                <label for="">Workplace
+                  <input type="text" name="workplace" required="required">
+                  <div class="qmark">
+                    <div class="qtext_div">
+                      <p class="qtext">Please enter your workplace.</p>
+                    </div>
+                  </div>
+                  <div class="errormessage">
+                     <p>Please enter your workplace</p>
+                  </div>
+                </label>
+
+                <label for="">City
+                  <select name="city" required="required" id="city">
+                    <option value="" selected disabled hidden>...</option>
+                    <option value="Stockholm">Stockholm</option>
+                    <option value="Göteborg">Göteborg</option>
+                    <option value="Jönköping">Jönköping</option>
+                  </select>
+                  <div class="qmark">
+                    <div class="qtext_div">
+                      <p class="qtext">Please enter the city of your workplace</p>
+                    </div>
+                  </div>
+                  <div class="errormessage">
+                      <p>Please select city</p>
+                  </div>
+                </label>
+
+                <a href="#" class="previous button">
+                  Previous
+                </a>
+
+                <input type="submit" name="" value="Register" class="register button">
+              </form >
+            </div>
+
+
+
+          <!-- Step 3 -->
+          <div class="step3 reg_step">
+            <div class="progressbar probar3"></div>
+            <h3 class="now_registered">You are now registered!</h3>
+            <a href="#" class="go_to_home button">Go to Home page</a>
+            <a href="#"class="go_to_profile button">Go to your profile</a>
+
           </div>
-          <h3>Personal information</h3>
-
-          <label for="">First name
-            <input type="text" name="" value="">
-              <div class="errormessage">
-						      Please enter your first name
-					    </div>
-          </label>
-
-          <label for="">Last name
-             <input type="text" name="" value="">
-             <div class="errormessage">
-                 Please enter your last name
-             </div>
-          </label>
-
-          <label for="">Email <p>This will be your username</p>
-            <input type="email" name="" value="">
-            <div class="errormessage">
-                Please enter your email
-            </div>
-            <div class="qmark" id="qmark-email">?</div>
-          </label>
-
-          <label for="">Password <p>The password </p>
-            <input type="password" name="" value="">
-            <div class="errormessage">
-                Please enter a password
-            </div>
-            <div class="qmark" id="qmark-pass">?</div>
-          </label>
-
-          <label for="">Confirm password
-            <input type="password" name="" value="">
-            <div class="qmark" id="qmark-confirmpass">?</div>
-          </label>
-
-          <button type="button" name="continue">
-            <a href="#">Continue</a>
-          </button>
-
         </div>
-
-
       </div>
-
     </main>
-
   </body>
 </html>
