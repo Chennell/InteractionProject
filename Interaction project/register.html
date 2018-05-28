@@ -5,11 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
      <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,600i,700|Open+Sans:400,400i,600,700" rel="stylesheet">
-    <link href="css/register.css" type="text/css" rel="stylesheet" />
+    <link href="css/main.css" type="text/css" rel="stylesheet" />
         <script src="js/jquery-3.2.1.min.js"></script>
-        <script src="js/register.js"></script>
+        <script src="js/main.js"></script>
   </head>
   <body>
+    <header>
+      <div class="menu">
+        <div class="logo">
+          <h1 class="logosmall">
+            <a href="index.html">Pharm inc.</a>
+          </h1>
+          <h1 class="logobig">
+            <a href="index.html">Pharmacutical inc.</a>
+          </h1>
+        </div>
+       </div>
+    </header>
     <main>
       <!-- Register info -->
       <div class="registerinfo">
@@ -23,159 +35,167 @@
 
             <!--     Step 1       -->
             <div class="reg-step1 reg_step">
+
+              <div class="form-box">
+
               <!-- Register progress bar -->
-              <div class="progressbar probar1"></div>
+                <div class="progressbar probar1"></div>
+              <!-- The form -->
+                <form id="step1_form" novalidate="novalidate">
+                  <h3>Personal information</h3>
+                  <label for="">
+                    <p>First name</p>
+                    <input type="text" name="firstname" class="firstname" required="required">
+                      <div class="errormessage">
+                         <p>Please enter your first name</p>
+                      </div>
+                  </label>
 
-            <form id="step1_form" novalidate="novalidate">
-              <h3>Personal information</h3>
-              <label for="">
-                <p>First name</p>
-                <input type="text" name="firstname" class="firstname" required="required">
-                  <div class="errormessage">
-                     <p>Please enter your first name</p>
+                  <label for="">
+                    <p>Last name</p>
+                     <input type="text" name="lastname" required="required" class="lastname">
+                     <div class="errormessage">
+                        <p>Please enter your last name</p>
+                     </div>
+                  </label>
+
+                  <label class="label_email">
+                    <p>Email</p>
+                    <p id="helptext">This will be your username</p>
+                    <input type="email" name="email" required="required" class="email">
+                    <div class="qmark">
+                      <div class="qtext_div">
+                        <p id="qtext">Please enter a valid email, example fredrik@fredrik.se.</p>
+                      </div>
+                    </div>
+                    <div class="errormessage">
+                       <p>Please enter your email</p>
+                    </div>
+                  </label>
+
+                  <label class="label_pw">
+                    <p>Password</p>
+                    <input type="password" name="pw" required="required" class="password">
+                    <div class="qmark">
+                     <div class="qtext_div">
+                       <p id="qtext">Password explanation</p>
+                    </div>
                   </div>
-              </label>
+                    <div class="errormessage">
+                        <p>Please enter a password</p>
+                    </div>
+                  </label>
 
-              <label for="">
-                <p>Last name</p>
-                 <input type="text" name="lastname" required="required" class="lastname">
-                 <div class="errormessage">
-                    <p>Please enter your last name</p>
-                 </div>
-              </label>
+                  <label class="label_con_pw">
+                    <p>Confirm password</p>
+                    <input type="password" name="conpw" required="required" class="con_password">
+                    <div class="qmark">
+                      <div class="qtext_div">
+                        <p id="qtext">Please enter the same password as above.</p>
+                      </div>
+                    </div>
+                    <div class="errormessage">
+                        <p>Please choose a password</p>
+                    </div>
+                    <div class="errormessage2">
+                        <p>The passwords do not match</p>
+                    </div>
+                  </label>
 
-              <label class="label_email">
-                <p>Email</p>
-                <p id="helptext">This will be your username</p>
-                <input type="email" name="email" required="required" class="email">
-                <div class="qmark">
-                  <div class="qtext_div">
-                    <p id="qtext">Please enter a valid email, example fredrik@fredrik.se.</p>
-                  </div>
-                </div>
-                <div class="errormessage">
-                   <p>Please enter your email</p>
-                </div>
-              </label>
-
-              <label class="label_pw">
-                <p>Password</p>
-                <input type="password" name="pw" required="required" class="password">
-                <div class="qmark">
-                 <div class="qtext_div">
-                   <p id="qtext">Password explanation</p>
-                </div>
+                    <input type="submit" name="" value="Continue" class="continue button">
+                  </form>
               </div>
-                <div class="errormessage">
-                    <p>Please enter a password</p>
-                </div>
-              </label>
 
-              <label class="label_con_pw">
-                <p>Confirm password</p>
-                <input type="password" name="conpw" required="required" class="con_password">
-                <div class="qmark">
-                  <div class="qtext_div">
-                    <p id="qtext">Please enter the same password as above.</p>
-                  </div>
-                </div>
-                <div class="errormessage">
-                    <p>Please choose a password</p>
-                </div>
-                <div class="errormessage2">
-                    <p>The passwords do not match</p>
-                </div>
-              </label>
-
-                <input type="submit" name="" value="Continue" class="continue button">
-              </form>
             </div>
 
 
             <!--     Step 2       -->
             <div class="reg-step2 reg_step">
-              <div class="progressbar probar2"></div>
-              <form id="step2_form" novalidate="novalidate">
-                <h3>Professional information</h3>
+              <div class="form-box">
+                <div class="progressbar probar2"></div>
+                <form id="step2_form" novalidate="novalidate">
+                  <h3>Professional information</h3>
 
-                <label for="">
-                  <p>Choose profession</p>
-                  <select  name="profession" required="required" id="profession">
-                    <option value="" selected disabled >...</option>
-                    <option value="Doctor">Doctor</option>
-                    <option value="Surgeon">Surgeon</option>
-                    <option value="Nurse">Nurse</option>
-                  </select>
-                  <div class="qmark">
-                    <div class="qtext_div">
-                      <p id="qtext">Please choose your profession.</p>
+                  <label for="">
+                    <p>Choose profession</p>
+                    <select  name="profession" required="required" id="profession">
+                      <option value="" selected disabled >...</option>
+                      <option value="Doctor">Doctor</option>
+                      <option value="Surgeon">Surgeon</option>
+                      <option value="Nurse">Nurse</option>
+                    </select>
+                    <div class="qmark">
+                      <div class="qtext_div">
+                        <p id="qtext">Please choose your profession.</p>
+                      </div>
                     </div>
-                  </div>
-                  <div class="errormessage">
-                       <p>Please select your profession</p>
-                  </div>
-                </label>
+                    <div class="errormessage">
+                         <p>Please select your profession</p>
+                    </div>
+                  </label>
 
-                <label for="">
-                  <p>Speciality</p>
-                   <input type="text" name="speciality" required="required" >
-                   <div class="qmark">
-                     <div class="qtext_div">
-                       <p id="qtext">Please tell us what your speciality is</p>
+                  <label for="">
+                    <p>Speciality</p>
+                     <input type="text" name="speciality" required="required" >
+                     <div class="qmark">
+                       <div class="qtext_div">
+                         <p id="qtext">Please tell us what your speciality is</p>
+                       </div>
                      </div>
-                   </div>
-                   <div class="errormessage">
-                      <p>Please enter your speciality</p>
-                   </div>
-                </label>
+                     <div class="errormessage">
+                        <p>Please enter your speciality</p>
+                     </div>
+                  </label>
 
-                <label for="">
-                  <p>Workplace</p>
-                  <input type="text" name="workplace" required="required">
-                  <div class="qmark">
-                    <div class="qtext_div">
-                      <p id="qtext">Please enter your workplace.</p>
+                  <label for="">
+                    <p>Workplace</p>
+                    <input type="text" name="workplace" required="required">
+                    <div class="qmark">
+                      <div class="qtext_div">
+                        <p id="qtext">Please enter your workplace.</p>
+                      </div>
                     </div>
-                  </div>
-                  <div class="errormessage">
-                     <p>Please enter your workplace</p>
-                  </div>
-                </label>
-
-                <label for="">
-                  <p>City</p>
-                  <select name="city" required="required" id="city">
-                    <option value="" selected disabled hidden>...</option>
-                    <option value="Stockholm">Stockholm</option>
-                    <option value="Göteborg">Göteborg</option>
-                    <option value="Jönköping">Jönköping</option>
-                  </select>
-                  <div class="qmark">
-                    <div class="qtext_div">
-                      <p id="qtext">Please enter the city of your workplace</p>
+                    <div class="errormessage">
+                       <p>Please enter your workplace</p>
                     </div>
-                  </div>
-                  <div class="errormessage">
-                      <p>Please select city</p>
-                  </div>
-                </label>
+                  </label>
 
-                <a href="#" class="previous button">
-                  Previous
-                </a>
+                  <label for="">
+                    <p>City</p>
+                    <select name="city" required="required" id="city">
+                      <option value="" selected disabled hidden>...</option>
+                      <option value="Stockholm">Stockholm</option>
+                      <option value="Göteborg">Göteborg</option>
+                      <option value="Jönköping">Jönköping</option>
+                    </select>
+                    <div class="qmark">
+                      <div class="qtext_div">
+                        <p id="qtext">Please enter the city of your workplace</p>
+                      </div>
+                    </div>
+                    <div class="errormessage">
+                        <p>Please select city</p>
+                    </div>
+                  </label>
 
-                <input type="submit" name="" value="Register" class="register button">
-              </form >
+                  <a href="#" class="previous button">
+                    Previous
+                  </a>
+
+                  <input type="submit" name="" value="Register" class="register button">
+                </form >
+              </div>
             </div>
 
 
           <!-- Step 3 -->
           <div class="step3 reg_step">
-            <div class="progressbar probar3"></div>
-            <h3 class="now_registered">You are now registered!</h3>
-            <a href="#" class="go_to_home button">Go to Home page</a>
-            <a href="#"class="go_to_profile button">Go to your profile</a>
-
+            <div class="form-box">
+              <div class="progressbar probar3"></div>
+              <h3 class="now_registered">You are now registered!</h3>
+              <a href="index.html" class="go_to_home button">Go to Home page</a>
+              <a href="#"class="go_to_profile button">Go to your profile</a>
+            </div>
           </div>
         </div>
       </div>

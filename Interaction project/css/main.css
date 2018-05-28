@@ -253,11 +253,12 @@ li.open-submenu img.menu-arrow{
 /*    z-index: 0;*/
 }
 
-.register{
-    position: absolute;
-    right: 0px;
-    top: 50%;
-    transform: translate(-50%, -50%);
+.register-frontPage{
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
 }
 
 
@@ -499,6 +500,244 @@ li .li-txt {}
 }
 
 
+
+/****************************/
+/*-- Register --*/
+/****************************/
+
+.registerinfo{
+  margin-bottom: 20px;
+}
+
+.registercontainer{
+  position: relative;
+  width: 85%;
+  max-width: 600px;
+  margin: 0 auto;
+  overflow: hidden;
+  border: 2px solid;
+  border-color: var(--light-grey);
+}
+
+
+.inner_steps_container{
+  position: relative;
+  width: 300%;
+  transition: transform 0.3s ease-out;
+	transform: translateX(0);
+}
+
+.reg_step{
+  float: left;
+  width: 33.33333%;
+  display: inline;
+	margin: 0;
+
+
+}
+
+.registercontainer label p{
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+
+.inner_steps_container.next-step2{
+  transform:translateX(-33.3333333%);
+}
+.inner_steps_container.next-step3{
+  transform:translateX(-66.666%);
+}
+
+.form-box{
+  padding: 0 20px;
+  margin-bottom: 20px;
+}
+
+h3{
+  margin-bottom: 20px;
+}
+
+/* Progressbar */
+.progressbar{
+  height: 45px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  margin: 20px auto;
+	background-size: 80%;
+
+}
+
+.probar1{
+  background-image: url('../img/progressbar-01.png');
+
+}
+
+.probar2{
+  background-image: url('../img/progressbar-02.png');
+
+}
+
+.probar3{
+  background-image: url('../img/progressbar-03.png');
+}
+
+
+
+/* Question marks next to labels */
+#helptext{
+  font-size: 12px;
+  font-style: italic;
+  color: var(--dark-grey);
+  margin-top: 0px;
+
+}
+
+.qmark{
+  content: '';
+  height: 20px;
+  background-image: url('../img/question-mark.png');
+	background-repeat: no-repeat;
+	background-size: 20px;
+	padding-left: 20px;
+  float: right;
+  margin: 10px 0;
+  position: relative;
+
+}
+#qtext{
+  color: var(--dark-grey);
+  font-size: 10px;
+  line-height: 12px;
+  background-color: #eee;
+  padding: 10px;
+
+}
+
+.qtext_div{
+  position: absolute;
+  bottom: 20px;
+  right: 15px;
+
+  width: 200px;
+  transition: transform 0.3s ease-out;
+	transform: scale(0, 0);
+  transform-origin: bottom right;
+
+}
+
+.qmark.show_qtext .qtext_div{
+  transform: scale(1, 1);
+}
+
+input[type='text'],
+input[type='email'],
+input[type='password'],
+select{
+  -webkit-appearance: none;
+	display: block;
+	font-size: 16px;
+	line-height: 40px;
+	border: solid 1px #eee;
+  width: 90%;
+  float: left;
+  background-color: white;
+}
+
+.continue{
+  float: right;
+  border: none;
+  margin: 0px 0px 20px 0px;
+}
+.previous{
+  margin:20px 0px 20px 0px;
+  float:left;
+}
+
+.register{
+  /* position: absolute;
+  right: 40px;
+  bottom: 20px; */
+  float: right;
+  margin: 20px 0px 20px 0px;
+}
+
+.errormessage{
+  clear: left;
+  color: #e30b00;
+	margin-bottom: 20px;
+  margin:0;
+
+  max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.3s ease-out;
+}
+.registercontainer label .errormessage > p{
+  font-size: 12px;
+  line-height: 22px;
+	font-weight: 500;
+  margin-top: 0px;
+}
+
+label.error *[required] {
+	background-color: #f5e8e8;
+	border-color: #e30b00;
+	color: #e30b00;
+	position: relative;
+}
+
+label.error .errormessage {
+	max-height: 30px;
+}
+
+.errormessage2{
+  clear: left;
+  color: #e30b00;
+	margin-bottom: 20px;
+
+  max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.3s ease-out;
+}
+.registercontainer label .errormessage2 p{
+  font-size: 12px;
+  line-height: 22px;
+	font-weight: 500;
+  margin-top: 0px;
+}
+
+label.error2 *[required] {
+	background-color: #f5e8e8;
+	border-color: #e30b00;
+	color: #e30b00;
+	position: relative;
+}
+
+.registercontainer label.error2 .errormessage2 {
+	max-height: 30px;
+}
+.reg-step2{
+  position: relative;
+}
+
+.step3{
+  text-align: center;
+ }
+
+ .now_registered{
+   margin-bottom: 40px;
+ }
+
+ .go_to_home, .go_to_profile{
+   display: block;
+   margin: 20px auto;
+   width: 150px;
+   font-size: 14px;
+ }
+
+
+
+
 /*-- Desktop version --*/
 @media (min-width: 640px){
 
@@ -547,6 +786,20 @@ li .li-txt {}
         width: 100%;
         text-align: left;
     }
+
+ /***** Register page ********/
+
+    .progressbar{
+      height: 60px;
+    }
+
+    .form-box{
+      padding: 0 40px;
+    }
+
+    .go_to_home, .go_to_profile{
+      width: 160px;
+    }
 }
 
 /*****The second media query******/
@@ -572,7 +825,7 @@ li .li-txt {}
 
     nav.main-menu{
         display: block;
-/*        transition: max-height 0.5s ease-out, opacity 0.5s ease-out;*/
+/*        transition: max-height 0.3s ease-out, opacity 0.3s ease-out;*/
     }
 
     .main-menu{
