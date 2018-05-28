@@ -119,7 +119,7 @@ a {
     z-index: 10;
 }
 
-.hamburger, .logo, .login-button, .basket {
+.hamburger, .logo, .login-button, .basket, .profile-img {
     float: left;
     margin-left: 10px;
     position: absolute;
@@ -146,11 +146,18 @@ a {
     right: 4em;
     padding: 5px;
     margin: 0;
+}
 
+.profile-img{
+/*    float: right;*/
+    right: 3em;
+    margin: 0;
+}
+.profile-img img{
+    width: 2.5em;
 }
 
 .basket{
-/*    width: 0.5em;*/
     right: 0;
 }
 
@@ -176,6 +183,7 @@ nav.slidedown{
     opacity: 1;
     transition: max-height 0.3s ease-out;
     background-color: #fff;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
 .main-menu{
@@ -240,17 +248,11 @@ li.open-submenu img.menu-arrow{
 /***************CONTENT START PAGE************/
 
 .banner{
-/*
-    background-image: url("../img/banner1.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-*/
     background-color: #999;
     height: 10em;
     width: 100;
     margin-top: 20px;
     position: relative;
-/*    z-index: 0;*/
 }
 
 .register-frontPage{
@@ -266,20 +268,30 @@ li.open-submenu img.menu-arrow{
 
 .startContent{
     overflow: hidden;
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
 .start-box{
-    background-color: #999;
     float: left;
-    height: 9em;
-    width: 48.3%;
-    margin-right: 10px;
-    margin-bottom: 10px;
+    width: 50%;
+    padding-right: 10px;
+    padding-left: 10px;
+    box-sizing: border-box;
 }
 
 .start-box:nth-child(even){
-    margin-right: 0;
+    padding-right: 0;
+}
+.start-box:nth-child(odd){
+    padding-left: 0;
+}
+
+.innerbox{
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #999;
+    height: 10em;
+    margin-bottom: 20px;
 }
 
 .start-box h2{
@@ -754,7 +766,11 @@ label.error2 *[required] {
 
 /******The content start page********/
     .banner{
-      height: 15em;
+      height: 20em;
+    }
+    
+    .start-box h2{
+        font-size: 20px;
     }
 
     footer p{
@@ -764,6 +780,8 @@ label.error2 *[required] {
     main {
       margin-top: 50px;
     }
+    
+    /********The education page******/
 
     ul .e-ul{
       width: 100%;
@@ -879,6 +897,7 @@ label.error2 *[required] {
     .main-menu li:hover .submenu{
         opacity: 1;
         max-height: 500px;
+        box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.5);
     }
 
     .main-menu li img.search-icon{
