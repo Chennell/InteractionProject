@@ -63,11 +63,13 @@
                     <p>Email</p>
                     <p id="helptext">This will be your username</p>
                     <input type="email" name="email" required="required" class="email">
-                    <div class="qmark">
+                    <a href="#" id="qmark_link">
+                      <div class="qmark">
                       <div class="qtext_div">
-                        <p id="qtext">Please enter a valid email, example fredrik@fredrik.se.</p>
+                          <p id="qtext">Please enter a valid email, example fredrik@fredrik.se.</p>
                       </div>
                     </div>
+                    </a>
                     <div class="errormessage">
                        <p>Please enter your email</p>
                     </div>
@@ -76,11 +78,13 @@
                   <label class="label_pw">
                     <p>Password</p>
                     <input type="password" name="pw" required="required" class="password">
-                    <div class="qmark">
-                     <div class="qtext_div">
-                       <p id="qtext">Password explanation</p>
+                    <a href="#" id="qmark_link">
+                      <div class="qmark">
+                       <div class="qtext_div">
+                         <p id="qtext">This will be your password for your login</p>
+                      </div>
                     </div>
-                  </div>
+                  </a>
                     <div class="errormessage">
                         <p>Please enter a password</p>
                     </div>
@@ -89,11 +93,13 @@
                   <label class="label_con_pw">
                     <p>Confirm password</p>
                     <input type="password" name="conpw" required="required" class="con_password">
-                    <div class="qmark">
-                      <div class="qtext_div">
-                        <p id="qtext">Please enter the same password as above.</p>
+                    <a href="#" id="qmark_link">
+                      <div class="qmark">
+                        <div class="qtext_div">
+                          <p id="qtext">Please enter exactly the same password as the field above.</p>
+                        </div>
                       </div>
-                    </div>
+                    </a>
                     <div class="errormessage">
                         <p>Please choose a password</p>
                     </div>
@@ -102,7 +108,7 @@
                     </div>
                   </label>
 
-                    <input type="submit" name="" value="Continue" class="continue button">
+                    <input type="submit" name="" value="Continue" class="continue button" tabindex="-1">
                   </form>
               </div>
 
@@ -113,22 +119,25 @@
             <div class="reg-step2 reg_step">
               <div class="form-box">
                 <div class="progressbar probar2"></div>
-                <form id="step2_form" novalidate="novalidate">
+                <form id="step2_form" novalidate="novalidate" tabindex="-1">
                   <h3>Professional information</h3>
 
                   <label for="">
                     <p>Choose profession</p>
-                    <select  name="profession" required="required" id="profession">
-                      <option value="" selected disabled >...</option>
-                      <option value="Doctor">Doctor</option>
-                      <option value="Surgeon">Surgeon</option>
+                    <select name="profession" required="required" id="profession" tabindex="-1">
+                    <option value="" selected disabled  >...</option>
+                      <option value="Doctor"  >Doctor</option>
+                      <option value="Surgeon"  >Surgeon</option>
                       <option value="Nurse">Nurse</option>
                     </select>
-                    <div class="qmark">
-                      <div class="qtext_div">
-                        <p id="qtext">Please choose your profession.</p>
+
+                    <a href="#" id="qmark_link">
+                      <div class="qmark">
+                        <div class="qtext_div">
+                          <p id="qtext">Complex set of knowledge and skills gained through high level of education</p>
+                        </div>
                       </div>
-                    </div>
+                    </a>
                     <div class="errormessage">
                          <p>Please select your profession</p>
                     </div>
@@ -136,12 +145,16 @@
 
                   <label for="">
                     <p>Speciality</p>
-                     <input type="text" name="speciality" required="required" >
-                     <div class="qmark">
-                       <div class="qtext_div">
-                         <p id="qtext">Please tell us what your speciality is</p>
+                     <input type="text" name="speciality" required="required" tabindex="-1">
+
+                     <a href="#" id="qmark_link">
+                       <div class="qmark">
+                         <div class="qtext_div">
+                           <p id="qtext">A special subject of study, line of work, skill, or the like on which one concentrates.</p>
+                         </div>
                        </div>
-                     </div>
+                     </a>
+
                      <div class="errormessage">
                         <p>Please enter your speciality</p>
                      </div>
@@ -149,12 +162,14 @@
 
                   <label for="">
                     <p>Workplace</p>
-                    <input type="text" name="workplace" required="required">
-                    <div class="qmark">
-                      <div class="qtext_div">
-                        <p id="qtext">Please enter your workplace.</p>
+                    <input type="text" name="workplace" required="required" tabindex="-1">
+                    <a href="#" id="qmark_link">
+                      <div class="qmark">
+                        <div class="qtext_div">
+                          <p id="qtext">Please enter the name of the current organization you are working at.</p>
+                        </div>
                       </div>
-                    </div>
+                    </a>
                     <div class="errormessage">
                        <p>Please enter your workplace</p>
                     </div>
@@ -162,27 +177,30 @@
 
                   <label for="">
                     <p>City</p>
-                    <select name="city" required="required" id="city">
+                    <select name="city" required="required" id="city" tabindex="-1">
                       <option value="" selected disabled hidden>...</option>
                       <option value="Stockholm">Stockholm</option>
                       <option value="Göteborg">Göteborg</option>
                       <option value="Jönköping">Jönköping</option>
                     </select>
-                    <div class="qmark">
-                      <div class="qtext_div">
-                        <p id="qtext">Please enter the city of your workplace</p>
+
+                    <a href="#" id="qmark_link">
+                      <div class="qmark">
+                        <div class="qtext_div">
+                          <p id="qtext">Please enter the city of your workplace</p>
+                        </div>
                       </div>
-                    </div>
+                    </a>
                     <div class="errormessage">
                         <p>Please select city</p>
                     </div>
                   </label>
 
-                  <a href="#" class="previous button">
+                  <a href="#" class="previous button" tabindex="-1">
                     Previous
                   </a>
 
-                  <input type="submit" name="" value="Register" class="register button">
+                  <input type="submit" name="" value="Register" class="register button" tabindex="-1">
                 </form >
               </div>
             </div>
@@ -193,8 +211,8 @@
             <div class="form-box">
               <div class="progressbar probar3"></div>
               <h3 class="now_registered">You are now registered!</h3>
-              <a href="index2.html" class="go_to_home button">Go to Home page</a>
-              <a href="#"class="go_to_profile button">Go to your profile</a>
+              <a href="index2.html" class="go_to_home button" tabindex="-1">Go to Home page</a>
+              <a href="#"class="go_to_profile button" tabindex="-1">Go to your profile</a>
             </div>
           </div>
         </div>

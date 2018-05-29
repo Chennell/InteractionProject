@@ -16,6 +16,7 @@ base: 5px;
 :root {
     --dark-blue: #006697;
     --light-blue: #66a3c1;
+    --dark-grey: #58595b;
 }
 
 /* use variable by writing background-color: var(--dark-blue); */
@@ -514,7 +515,7 @@ li .li-txt {}
 
 
 /****************************/
-/*-- Register --*/
+/*-- Register page --*/
 /****************************/
 
 .registerinfo{
@@ -523,12 +524,12 @@ li .li-txt {}
 
 .registercontainer{
   position: relative;
-  width: 85%;
-  max-width: 600px;
+  /* width: 85%; */
+  width: 300px;
   margin: 0 auto;
   overflow: hidden;
   border: 2px solid;
-  border-color: var(--light-grey);
+  border-color: var(--dark-grey);
 }
 
 
@@ -544,8 +545,6 @@ li .li-txt {}
   width: 33.33333%;
   display: inline;
 	margin: 0;
-
-
 }
 
 .registercontainer label p{
@@ -566,7 +565,7 @@ li .li-txt {}
   margin-bottom: 20px;
 }
 
-h3{
+.reg_step h3{
   margin-bottom: 20px;
 }
 
@@ -615,8 +614,17 @@ h3{
   float: right;
   margin: 10px 0;
   position: relative;
+  transition: background-size, margin, height 0.3s ease-out;
+
 
 }
+.qmark.qmark_focus{
+  height: 23px;
+  background-size: 23px;
+  margin: 5px 0;
+  padding-left: 25px;
+}
+
 #qtext{
   color: var(--dark-grey);
   font-size: 10px;
@@ -768,7 +776,7 @@ label.error2 *[required] {
     .banner{
       height: 20em;
     }
-    
+
     .start-box h2{
         font-size: 20px;
     }
@@ -780,7 +788,7 @@ label.error2 *[required] {
     main {
       margin-top: 50px;
     }
-    
+
     /********The education page******/
 
     ul .e-ul{
@@ -809,6 +817,9 @@ label.error2 *[required] {
 
     .progressbar{
       height: 60px;
+    }
+    .registercontainer{
+      width: 520px;
     }
 
     .form-box{
@@ -903,6 +914,16 @@ label.error2 *[required] {
     .main-menu li img.search-icon{
         float: inherit;
         padding-left: 10px;
+    }
+
+/***** Register page ********/
+
+    .registercontainer{
+      width: 600px;
+
+    }
+    .form-box{
+      padding: 0 60px;
     }
 
 }
