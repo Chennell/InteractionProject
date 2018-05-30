@@ -154,27 +154,10 @@ $(document).ready(function(){
             inp.on("click", function(e) {
              questionmark.removeClass("show_qtext");
            })
-           select.on("click", function(e) {
+            select.on("click", function(e) {
             questionmark.removeClass("show_qtext");
-          })
+            })
           });
-
-          $("#qmark_link").focus(function(e){
-            // e.preventDefault();
-            var questionmark = $(this).find(".qmark");
-            questionmark.toggleClass("qmark_focus");
-          });
-
-            $("#qmark_link").off(transEnd);
-
-            // var qlink = $(this).find("#qmark_link");
-            // qlink.eq(0).trigger("focus", function(){
-            //   // console.log(questionmark)
-            //   var questionmark = $(this).find(".qmark");
-            //   questionmark.toggleClass("qmark_focus")
-            //   // questionmark.off(transEnd);
-            // });
-
 });
 
 
