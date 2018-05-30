@@ -58,12 +58,15 @@ a {
     width: fit-content;
 }
 
-/****************************/
-/**** Mobile first***/
-/****************************/
+/*****************************/
+/******* Mobile first ********/
+/*****************************/
 
-/**** MENU*************/
-/*** This is the cross/hamburger styling**/
+/*********************/
+/******* MEMU ********/
+/*********************/
+
+/*** This is the x/hamburger styling ***/
 .line {
     width: 35px;
     height: 4px;
@@ -72,32 +75,34 @@ a {
     margin-bottom: 5px;
 }
 
-.one{
+.one {
     transition: 0.2s ease-in-out;
     -webkit-transition: 0.2s ease-in-out;
     -moz-transition: 0.2s ease-in-out;
 }
 
-.two{
+.two {
     transition: 0.2s ease-in-out;
     -webkit-transition: 0.2s ease-in-out;
     -moz-transition: 0.2s ease-in-out;
 }
 
-.three{
+.three {
     transition: 0.2s ease-in-out;
     -webkit-transition: 0.2s ease-in-out;
     -moz-transition: 0.2s ease-in-out;
 }
-/*This is how the lines should move, Should happen when you click**/
-.one.open{
+
+/* This is how the lines should move, Should happen when you click */
+
+.one.open {
     transform: translateY(9px) rotateZ(45deg);
     transition: 0.2s ease-in-out;
     -webkit-transition: 0.2s ease-in-out;
     -moz-transition: 0.2s ease-in-out;
 }
 
-.two.open{
+.two.open {
     width: 0;
     opacity: 0;
     transition: 0.2s ease-in-out;
@@ -105,16 +110,14 @@ a {
     -moz-transition: 0.2s ease-in-out;
 }
 
-.three.open{
+.three.open {
     transform: translateY(-9px) rotateZ(-45deg);
     transition: 0.2s ease-in-out;
     -webkit-transition: 0.2s ease-in-out;
     -moz-transition: 0.2s ease-in-out;
 }
 
-
 .menu {
-/*    overflow: hidden;*/
     height: 3em;
     position: relative;
     z-index: 10;
@@ -127,46 +130,46 @@ a {
     z-index: 1;
 }
 
-.logo{
+.logo {
     font-size: 10px;
     left: 50%;
     top: 25%;
     transform: translate(-50%, -50%);
 }
 
-.logo a{
-      color: #000;
+.logo a {
+    color: #000;
 }
 
-.logobig{
+.logobig {
     display: none;
 }
 
-.login-button{
+.login-button {
     font-size: 10px;
     right: 4em;
     padding: 5px;
     margin: 0;
 }
 
-.profile-img{
-/*    float: right;*/
+.profile-img {
     right: 3em;
     margin: 0;
 }
-.profile-img img{
+
+.profile-img img {
     width: 2.5em;
 }
 
-.basket{
+.basket {
     right: 0;
 }
 
-.basket img{
+.basket img {
     width: 2em;
 }
 
-nav{
+nav {
     /*Here You style the menu*/
     width: 100%;
     max-height: 0;
@@ -178,7 +181,7 @@ nav{
     transition: max-height 0.3s ease-out;
 }
 
-nav.slidedown{
+nav.slidedown {
     max-height: 450px;
     width: 100%;
     opacity: 1;
@@ -187,17 +190,17 @@ nav.slidedown{
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
-.main-menu{
+.main-menu {
     margin-top: 30px;
     padding-right: 10px;
 }
 
-.main-menu li img{
+.main-menu li img {
     width: 15px;
     float: right;
 }
 
-.main-menu li{
+.main-menu li {
     margin-top: 10px;
     width: 100%;
     padding: 5px;
@@ -208,12 +211,12 @@ nav.slidedown{
     overflow: hidden;
 }
 
-.main-menu >li{
+.main-menu >li {
     border-bottom: solid 1px #ddd;
-
 }
+
 /*The styling of the sub menu*/
-ul.submenu{
+ul.submenu {
     padding-left: 10px;
     font-size: 12px;
     list-style: none;
@@ -224,31 +227,31 @@ ul.submenu{
     background-color: #ddd;
 }
 
-.open-submenu ul.submenu{
+.open-submenu ul.submenu {
     max-height: 200px;
     transition: max-height 0.3s ease-out;
     opacity: 1;
     z-index: 200;
 }
 
-.submenu a{
+.submenu a {
     color: #000;
 }
 
-/* Changes the arrow up and down*/
-li img.menu-arrow{
+/* Changes the arrow up and down */
+li img.menu-arrow {
     transform: translateY(0px) rotateZ(0deg);
     transition: 0.3s ease-in-out;
 }
 
-li.open-submenu img.menu-arrow{
+li.open-submenu img.menu-arrow {
     transform: translateY(0px) rotateZ(180deg);
     transition: 0.3s ease-in-out;
 }
 
-/***************CONTENT START PAGE************/
+/***CONTENT START PAGE***/
 
-.banner{
+.banner {
     background-color: #999;
     height: 10em;
     width: 100;
@@ -256,23 +259,21 @@ li.open-submenu img.menu-arrow{
     position: relative;
 }
 
-.register-frontPage{
+.register-frontPage {
   position: absolute;
   right: 0;
   top: 50%;
   transform: translate(-50%, -50%);
-
 }
 
+/***THIS IS THE MAIN CONTENT***/
 
-/****************THIS IS THE MAIN CONTENT*********/
-
-.startContent{
+.startContent {
     overflow: hidden;
     margin-top: 40px;
 }
 
-.start-box{
+.start-box {
     float: left;
     width: 50%;
     padding-right: 10px;
@@ -280,14 +281,15 @@ li.open-submenu img.menu-arrow{
     box-sizing: border-box;
 }
 
-.start-box:nth-child(even){
+.start-box:nth-child(even) {
     padding-right: 0;
 }
-.start-box:nth-child(odd){
+
+.start-box:nth-child(odd) {
     padding-left: 0;
 }
 
-.innerbox{
+.innerbox {
     padding: 10px;
     box-sizing: border-box;
     background-color: #999;
@@ -295,15 +297,14 @@ li.open-submenu img.menu-arrow{
     margin-bottom: 20px;
 }
 
-.start-box h2{
+.start-box h2 {
     font-size: 15px;
     color: #fff;
     margin-left: 10px;
 }
 
-
 /********This is the newsletter banner*********/
-.startNewsletter{
+.startNewsletter {
     overflow: hidden;
     margin-top: 20px;
     background-color: var(--light-blue);
@@ -311,7 +312,7 @@ li.open-submenu img.menu-arrow{
     height: 10em;
 }
 
-.newsLetter{
+.newsLetter {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -319,13 +320,13 @@ li.open-submenu img.menu-arrow{
 }
 
 /********FOOTER*********/
-footer{
+footer {
     background-color: #666;
     height: 50px
 }
 
-footer p{
-    color: #444;
+footer p {
+    color: #eee;
     text-align: center;
     padding-top: 15px;
     font-size: 10px;
@@ -364,8 +365,6 @@ li .e-img img {
   width: 100%;
   box-sizing: border-box;
 }
-
-li .li-txt {}
 
 .li-txt h3 {
   font-size: 15px;
@@ -512,19 +511,29 @@ li .li-txt {}
   margin-bottom: 15px;
 }
 
-
-
-/****************************/
+/*********************/
 /*-- Register page --*/
-/****************************/
+/*********************/
 
-.registerinfo{
-  margin-bottom: 20px;
+.arrow {
+  position: relative;
 }
 
-.registercontainer{
+.arrow img {
+  width: 30px;
+  position: absolute;
+  top: 6px;
+  left: 0px;
+}
+
+.registerinfo {
+  margin: 0 auto;
+  margin-bottom: 20px;
+  width: 300px;
+}
+
+.registercontainer {
   position: relative;
-  /* width: 85%; */
   width: 300px;
   margin: 0 auto;
   overflow: hidden;
@@ -532,70 +541,70 @@ li .li-txt {}
   border-color: var(--dark-grey);
 }
 
-.inner_steps_container{
+.inner_steps_container {
   position: relative;
   width: 300%;
   transition: transform 0.3s ease-out;
 	transform: translateX(0);
 }
 
-.registercontainer label p{
+.registercontainer label p {
   font-size: 16px;
   margin-top: 20px;
 }
 
-.inner_steps_container.next-step2{
+.inner_steps_container.next-step2 {
   transform:translateX(-33.3333333%);
 }
-.inner_steps_container.next-step3{
+
+.inner_steps_container.next-step3 {
   transform:translateX(-66.666%);
 }
 
-.form-box{
+.form-box {
   padding: 0 20px;
   margin-bottom: 20px;
 }
-.reg_step{
+
+.reg_step {
   float: left;
   width: 33.33333%;
   display: inline;
 	margin: 0;
 }
 
-.reg_step h3{
+.reg_step h3 {
   margin-bottom: 20px;
 }
 
-.reg-step2{
+.reg-step2 {
   position: relative;
 }
 
-.step3{
+.step3 {
   text-align: center;
  }
 
- .now_registered{
+ .now_registered {
    margin-bottom: 40px;
  }
-
 
  input[type='text'],
  input[type='email'],
  input[type='password'],
  select{
-   -webkit-appearance: none;
+  -webkit-appearance: none;
  	display: block;
  	font-size: 16px;
  	line-height: 40px;
  	border: solid 1px #eee;
-   width: 90%;
-   float: left;
-   background-color: white;
+  width: 90%;
+  float: left;
+  background-color: white;
  }
 
-
 /* Progressbar */
-.progressbar{
+.progressbar {
   height: 45px;
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -603,31 +612,27 @@ li .li-txt {}
 	background-size: 80%;
 }
 
-.probar1{
+.probar1 {
   background-image: url('../img/progressbar-01.png');
 }
 
-.probar2{
+.probar2 {
   background-image: url('../img/progressbar-02.png');
 }
 
-.probar3{
+.probar3 {
   background-image: url('../img/progressbar-03.png');
 }
-/* *** */
-
-
 
 /* Question marks next to labels */
-#helptext{
+#helptext {
   font-size: 12px;
   font-style: italic;
   color: var(--dark-grey);
   margin-top: 0px;
-
 }
 
-.qmark{
+.qmark {
   content: '';
   height: 20px;
   background-image: url('../img/question-mark.png');
@@ -640,23 +645,22 @@ li .li-txt {}
   transition: background-size, margin, height 0.3s ease-out;
 }
 
-.qmark.qmark_focus{
+.qmark.qmark_focus {
   height: 23px;
   background-size: 23px;
   margin: 5px 0;
   padding-left: 25px;
 }
 
-#qtext{
+#qtext {
   color: var(--dark-grey);
   font-size: 10px;
   line-height: 12px;
   background-color: #eee;
   padding: 10px;
-
 }
 
-.qtext_div{
+.qtext_div {
   position: absolute;
   bottom: 20px;
   right: 15px;
@@ -665,17 +669,14 @@ li .li-txt {}
   transition: transform 0.3s ease-out;
 	transform: scale(0, 0);
   transform-origin: bottom right;
-
 }
 
-.qmark.show_qtext .qtext_div{
+.qmark.show_qtext .qtext_div {
   transform: scale(1, 1);
 }
-/* *** */
-
 
 /* Error messages */
-.errormessage{
+.errormessage {
   clear: left;
   color: #e30b00;
 	margin-bottom: 20px;
@@ -685,7 +686,8 @@ li .li-txt {}
 	overflow: hidden;
 	transition: max-height 0.3s ease-out;
 }
-.registercontainer label .errormessage > p{
+
+.registercontainer label .errormessage > p {
   font-size: 12px;
   line-height: 22px;
 	font-weight: 500;
@@ -703,7 +705,7 @@ label.error .errormessage {
 	max-height: 30px;
 }
 
-.errormessage2{
+.errormessage2 {
   clear: left;
   color: #e30b00;
 	margin-bottom: 20px;
@@ -712,7 +714,8 @@ label.error .errormessage {
 	overflow: hidden;
 	transition: max-height 0.3s ease-out;
 }
-.registercontainer label .errormessage2 p{
+
+.registercontainer label .errormessage2 p {
   font-size: 12px;
   line-height: 22px;
 	font-weight: 500;
@@ -729,63 +732,60 @@ label.error2 *[required] {
 .registercontainer label.error2 .errormessage2 {
 	max-height: 30px;
 }
-/* *** */
-
-
 
 /* Buttons for registering */
-.continue{
+.continue {
   float: right;
   border: none;
   margin: 0px 0px 20px 0px;
 }
-.previous{
+
+.previous {
   margin:20px 0px 20px 0px;
   float:left;
 }
 
-.register{
-  /* position: absolute;
-  right: 40px;
-  bottom: 20px; */
+.register {
   float: right;
   margin: 20px 0px 20px 0px;
 }
 
- .go_to_home, .go_to_profile{
+ .go_to_home, .go_to_profile {
    display: block;
    margin: 20px auto;
    width: 150px;
    font-size: 14px;
  }
 
-
-
-
 /*-- Desktop version --*/
 @media (min-width: 640px){
 
-    .button{
+    .arrow {
+      display: none;
+    }
+
+    .button {
         font-size: 15px;
     }
 
-    .logobig{
+    .logobig {
         display: block;
     }
-    .logosmall{
+
+    .logosmall {
         display: none;
     }
 
 /******The content start page********/
-    .banner{
+    .banner {
       height: 20em;
     }
 
-    .start-box h2{
+    .start-box h2 {
         font-size: 20px;
     }
 
-    footer p{
+    footer p {
       font-size: 15px;
     }
 
@@ -795,7 +795,7 @@ label.error2 *[required] {
 
     /********The education page******/
 
-    ul .e-ul{
+    ul .e-ul {
       width: 100%;
       box-sizing: border-box;
       margin-right: 10px;
@@ -819,18 +819,23 @@ label.error2 *[required] {
 
  /***** Register page ********/
 
-    .progressbar{
+    .progressbar {
       height: 60px;
     }
-    .registercontainer{
+
+    .registerinfo {
       width: 520px;
     }
 
-    .form-box{
+    .registercontainer {
+      width: 520px;
+    }
+
+    .form-box {
       padding: 0 40px;
     }
 
-    .go_to_home, .go_to_profile{
+    .go_to_home, .go_to_profile {
       width: 160px;
     }
 }
@@ -838,9 +843,10 @@ label.error2 *[required] {
 /*****The second media query******/
 @media (min-width: 1036px) {
 
-    .logo{
+    .logo {
         left: 9em;
     }
+
     .hamburger{
         display: none;
     }
@@ -858,29 +864,29 @@ label.error2 *[required] {
 
     nav.main-menu{
         display: block;
-/*        transition: max-height 0.3s ease-out, opacity 0.3s ease-out;*/
     }
 
-    .main-menu{
+    .main-menu {
         margin-top: 50px;
     }
 
-    .main-menu li{
+    .main-menu li {
         display: inline;
         font-size: 12px;
         position: relative;
         padding: 10px 10px;
         transition: background-color 0.3s ease-out;
     }
-    .main-menu > li:hover{
+
+    .main-menu > li:hover {
         background-color: #ddd;
     }
 
-    .main-menu >li{
+    .main-menu >li {
         border-bottom: none;
     }
 
-    .main-menu img.menu-arrow{
+    .main-menu img.menu-arrow {
         display: none;
     }
 
@@ -899,35 +905,38 @@ label.error2 *[required] {
         background-color: #fff;
     }
 
-    .submenu a{
+    .submenu a {
         padding: 5px 5px;
         transition: color 0.3s ease-out;
         display: inline-block;
     }
 
-    .submenu a:hover{
+    .submenu a:hover {
         color: var(--light-blue);
     }
 
-    .main-menu li:hover .submenu{
+    .main-menu li:hover .submenu {
         opacity: 1;
         max-height: 500px;
         box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.5);
     }
 
-    .main-menu li img.search-icon{
+    .main-menu li img.search-icon {
         float: inherit;
         padding-left: 10px;
     }
 
 /***** Register page ********/
-
-    .registercontainer{
+    .registerinfo {
       width: 600px;
 
     }
-    .form-box{
-      padding: 0 60px;
+
+    .registercontainer {
+      width: 600px;
     }
 
+    .form-box {
+      padding: 0 60px;
+    }
 }
